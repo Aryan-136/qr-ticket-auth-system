@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>QR Event Pass Gate Scanner | THM Surat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5-qrcode/2.3.8/html5-qrcode.min.js"></script>
+</head>
+<body>
+    <div class="hud-wrapper">
+        <header class="hud-header">
+            <div class="badge">SECURE GATEWAY v2.4</div>
+            <h1 class="hud-title">EVENT ACCESS SCANNER</h1>
+            <p class="hud-subtitle">The Hackers Meetup Surat â€¢ Anti-Replay Verification</p>
+        </header>
+
+        <main class="hud-card">
+            <div class="scanner-frame">
+                <div id="reader" class="reader-viewport"></div>
+                <div class="laser-scanner"></div>
+            </div>
+
+            <!-- Live Status Feedback Banner -->
+            <div id="status-card" class="status-card idle">
+                <div id="status-icon" class="status-icon">ðŸ“·</div>
+                <div class="status-text-wrap">
+                    <div id="status-title" class="status-title">READY TO SCAN</div>
+                    <div id="status-desc" class="status-desc">Align attendee QR pass within viewport</div>
+                </div>
+            </div>
+
+            <!-- Manual Input Fallback -->
+            <form id="manual-form" class="manual-input-box">
+                <input type="text" id="manual-token" placeholder="Enter Token ID (e.g. THMFOOD001)" autocomplete="off">
+                <button type="submit" id="btn-manual">VERIFY</button>
+            </form>
+        </main>
+
+        <footer class="hud-footer">
+            <span>Engineered with â¤ï¸ by <a href="https://linkedin.com/in/aryanpandya" target="_blank">Aryan Pandya</a></span>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
